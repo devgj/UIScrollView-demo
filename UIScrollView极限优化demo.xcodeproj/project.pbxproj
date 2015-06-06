@@ -13,7 +13,6 @@
 		F24A6D681B23052D00303B3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F24A6D661B23052D00303B3F /* Main.storyboard */; };
 		F24A6D6A1B23052D00303B3F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F24A6D691B23052D00303B3F /* Images.xcassets */; };
 		F24A6D791B23052D00303B3F /* UIScrollView____demoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F24A6D781B23052D00303B3F /* UIScrollView____demoTests.m */; };
-		F24A6D841B232AEC00303B3F /* GJScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = F24A6D831B232AEC00303B3F /* GJScrollView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +38,6 @@
 		F24A6D721B23052D00303B3F /* UIScrollView极限优化demoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UIScrollView极限优化demoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F24A6D771B23052D00303B3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F24A6D781B23052D00303B3F /* UIScrollView____demoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView____demoTests.m"; sourceTree = "<group>"; };
-		F24A6D821B232AEC00303B3F /* GJScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GJScrollView.h; sourceTree = "<group>"; };
-		F24A6D831B232AEC00303B3F /* GJScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GJScrollView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,8 +79,6 @@
 		F24A6D5B1B23052D00303B3F /* UIScrollView极限优化demo */ = {
 			isa = PBXGroup;
 			children = (
-				F24A6D821B232AEC00303B3F /* GJScrollView.h */,
-				F24A6D831B232AEC00303B3F /* GJScrollView.m */,
 				F24A6D601B23052D00303B3F /* AppDelegate.h */,
 				F24A6D611B23052D00303B3F /* AppDelegate.m */,
 				F24A6D631B23052D00303B3F /* ViewController.h */,
@@ -220,7 +215,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F24A6D841B232AEC00303B3F /* GJScrollView.m in Sources */,
 				F24A6D651B23052D00303B3F /* ViewController.m in Sources */,
 				F24A6D621B23052D00303B3F /* AppDelegate.m in Sources */,
 				F24A6D5F1B23052D00303B3F /* main.m in Sources */,
