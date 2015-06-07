@@ -48,7 +48,6 @@
 // 添加UIScrollView
 - (void)setupScrollView {
     UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
-    scrollView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     scrollView.pagingEnabled = YES;
     scrollView.delegate = self;
     scrollView.showsHorizontalScrollIndicator = NO;
@@ -72,7 +71,7 @@
     for (UIImageView *imageView in self.scrollView.subviews) {
         [rs appendFormat:@"%p - ", imageView];
     }
-    [rs appendFormat:@"%d", count];
+    [rs appendFormat:@"%ld", (long)count];
     NSLog(@"%@", rs);
 }
 
@@ -108,9 +107,10 @@
             [imageView removeFromSuperview];
         }
     }
-    
+
     [self.visibleImageViews minusSet:self.reusedImageViews];
     
+    // 是否需要显示新的视图
     for (NSInteger index = firstIndex; index <= lastIndex; index++) {
         BOOL isShow = NO;
         
@@ -126,18 +126,18 @@
     }
 }
 
-#pragma mark 显示一个图片view
-- (void)showImageViewAtIndex:(NSInteger)index
-{
-    UIImageView *imageView = [self.reusedImageViews anyObject];
+// 显示一个图片view
+- (void)showImageViewAtIndex:(NSInteger)index {
     
+    UIImageView *imageView = [self.reusedImageViews anyObject];
+
     if (imageView) {
         [self.reusedImageViews removeObject:imageView];
     } else {
         imageView = [[UIImageView alloc] init];
         imageView.contentMode = UIViewContentModeScaleAspectFit;
     }
-    
+
     CGRect bounds = self.scrollView.bounds;
     CGRect imageViewFrame = bounds;
     imageViewFrame.origin.x = CGRectGetWidth(bounds) * index;
